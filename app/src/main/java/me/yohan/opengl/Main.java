@@ -27,7 +27,7 @@ public class Main extends AppCompatActivity {
             mGLSurfaceView.setEGLContextClientVersion(2);
 
             // Set the renderer to our demo renderer, defined below.
-            mGLSurfaceView.setRenderer(new LessonOneRenderer());
+            mGLSurfaceView.setRenderer(new LessonTwoRenderer());
         } else {
             Toast.makeText(this, "too bad", Toast.LENGTH_SHORT).show();
             finish();

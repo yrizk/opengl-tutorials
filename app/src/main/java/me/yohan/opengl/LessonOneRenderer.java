@@ -65,12 +65,12 @@ public class LessonOneRenderer implements GLSurfaceView.Renderer {
     /**
      * How many bytes per float.
      */
-    private final int mBytesPerFloat = 4;
+    public static final int BYTES_PER_FLOAT = 4;
 
     /**
      * How many elements per vertex.
      */
-    private final int mStrideBytes = 7 * mBytesPerFloat;
+    private final int mStrideBytes = 7 * BYTES_PER_FLOAT;
 
     /**
      * Offset of the position data.
@@ -138,11 +138,11 @@ public class LessonOneRenderer implements GLSurfaceView.Renderer {
                 0.0f, 0.0f, 0.0f, 1.0f};
 
         // Initialize the buffers.
-        mTriangle1Vertices = ByteBuffer.allocateDirect(triangle1VerticesData.length * mBytesPerFloat)
+        mTriangle1Vertices = ByteBuffer.allocateDirect(triangle1VerticesData.length * BYTES_PER_FLOAT)
                 .order(ByteOrder.nativeOrder()).asFloatBuffer();
-        mTriangle2Vertices = ByteBuffer.allocateDirect(triangle2VerticesData.length * mBytesPerFloat)
+        mTriangle2Vertices = ByteBuffer.allocateDirect(triangle2VerticesData.length * BYTES_PER_FLOAT)
                 .order(ByteOrder.nativeOrder()).asFloatBuffer();
-        mTriangle3Vertices = ByteBuffer.allocateDirect(triangle3VerticesData.length * mBytesPerFloat)
+        mTriangle3Vertices = ByteBuffer.allocateDirect(triangle3VerticesData.length * BYTES_PER_FLOAT)
                 .order(ByteOrder.nativeOrder()).asFloatBuffer();
 
         mTriangle1Vertices.put(triangle1VerticesData).position(0);
